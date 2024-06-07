@@ -1,0 +1,8 @@
+nltk
+flask
+numpy
+pandas
+Sastrawi
+keras_preprocessing
+keras
+tensorflow
