@@ -1,5 +1,6 @@
 nltk
 flask
+flask_cors
 numpy
 pandas
 Sastrawi
