@@ -2,10 +2,15 @@
 Backend model AI keras(.h5) menggunakan framework python (Flask)
 
 # Konfigurasi
-1. Buat dan aktivasi environment
+1. Buat environment
 ```bash
 python -m venv .venv
+
+// use bash
 . .venv/Scripts/activate
+
+// use cmd
+.venv\Scripts\activate
 ```
 
 2. Install library
