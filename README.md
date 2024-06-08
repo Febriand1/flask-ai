@@ -20,7 +20,7 @@ pip install -r requirements.txt
 
 3. Running flask
 ```bash
-flask --app app run
+flask run
 ```
 
 4. Base URL
