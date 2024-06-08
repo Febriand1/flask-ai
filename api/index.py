@@ -25,6 +25,7 @@ def chat():
         listPertanyaan.append(message)
         
         response = {
+            "isBot" : True, 
             "ITeung": return_message,
             "status": status,
             "akurasi": float(akurasi),
