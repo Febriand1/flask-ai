@@ -4,9 +4,9 @@ import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from modul import reply
 
-listJawaban = []
-listAkurasi = []
-listPertanyaan = []
+AnswerList = []
+AccuracyList = []
+QuesionList = []
 
 def welcome():
     return jsonify({'message': 'Welcome to the API'}), 200
@@ -19,16 +19,16 @@ def chat():
         if not message:
             return jsonify({"error": "No message provided"}), 400
 
-        return_message, status, dec_outputs, akurasi = reply.botReply(message)
-        listJawaban.append(return_message)
-        listAkurasi.append(float(akurasi))
-        listPertanyaan.append(message)
+        return_message, status, dec_outputs, accuracy = reply.botReply(message)
+        AnswerList.append(return_message)
+        AccuracyList.append(float(accuracy))
+        QuesionList.append(message)
         
         response = {
             "isBot" : True, 
             "ITeung": return_message,
             "status": status,
-            "akurasi": float(akurasi),
+            "accuracy": float(accuracy),
             # 'dec_outputs': dec_outputs.tolist() if isinstance(dec_outputs, (list, np.ndarray)) else dec_outputs
         }
 
