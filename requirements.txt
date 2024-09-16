@@ -1,9 +1,8 @@
-nltk
 flask
 flask_cors
+nltk
 numpy
 pandas
-Sastrawi
-keras_preprocessing
 keras
+keras_preprocessing
 tensorflow

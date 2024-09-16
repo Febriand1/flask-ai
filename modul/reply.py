@@ -39,7 +39,7 @@ def load_tokenizer(path, tokenizer_path):
         with open(path + tokenizer_path, 'rb') as handle:
             tokenizer = pickle.load(handle)
     if tokenizer:
-        print(f"Tokenizer vocabulary size: {len(tokenizer.word_index) + 1}")  # +1 for padding token
+        print(f"Tokenizer vocabulary size: {len(tokenizer.word_index) + 1}")
     return tokenizer
 
 
@@ -48,7 +48,7 @@ def setParams(path, slang_path, config_path, tokenizer_path):
     config = load_config(path, config_path)
     tokenizer = load_tokenizer(path, tokenizer_path)
     
-    VOCAB_SIZE = len(tokenizer.word_index) + 1  # +1 for padding token
+    VOCAB_SIZE = len(tokenizer.word_index) + 1
     maxlen_questions = config['maxlen_questions']
     maxlen_answers = config['maxlen_answers']
     return list_indonesia_slang, VOCAB_SIZE, maxlen_questions, maxlen_answers, tokenizer

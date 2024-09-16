@@ -21,7 +21,7 @@ def chat():
 
         return_message, status, dec_outputs, akurasi = reply.botReply(message)
         listJawaban.append(return_message)
-        listAkurasi.append(float(akurasi))  # Convert to float
+        listAkurasi.append(float(akurasi))
         listPertanyaan.append(message)
         
         response = {
