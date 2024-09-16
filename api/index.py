@@ -1,8 +1,9 @@
 from flask import request, jsonify
 import sys
 import os
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from modul import reply
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 AnswerList = []
 AccuracyList = []
@@ -35,6 +36,6 @@ def chat():
         return jsonify(response), 200
     
     except FileNotFoundError as e:
-        return jsonify({"error": f"File not found: {e}"}), 500
+        return jsonify({"error": f"File not found: {e}"}), 404
     except Exception as e:
         return jsonify({"error": f"An error occurred: {e}"}), 500
