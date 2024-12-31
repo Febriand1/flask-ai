@@ -30,6 +30,7 @@ def chat():
             "ITeung": return_message,
             "status": status,
             "accuracy": float(accuracy),
+            # 'dec_outputs': dec_outputs.tolist() if isinstance(dec_outputs, (list, np.ndarray)) else dec_outputs
         }
 
         return jsonify(response), 200
